@@ -1,0 +1,29 @@
+<a routerLink="/videos">Volver</a>
+
+<div class="container">
+  <div class="row row-centered vertical-center">
+
+      <div class="card">
+        <div class="card-body">
+          <h2>
+            {{ video.name }}
+          </h2>
+        </div>
+        <img src="{{ video.image }}" alt="">
+      </div>
+      <ng-container *ngIf="!play">
+      <button (click)="openVideo(video)" class="btn btn-primary">
+        Play this video
+      </button>
+      </ng-container>
+      <ng-container *ngIf="play">
+        <button (click)="closeVideo(video)" class="btn btn-primary">
+          Close Video
+        </button>
+      </ng-container>
+      
+  </div>
+  {{play}}
+</div>
+
+

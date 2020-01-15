@@ -1,0 +1,13 @@
+<p>stellarium works!</p>
+<a routerLink="/home">Volver</a>
+
+
+<button (click)="openStellarium()" class="btn btn-primary">
+    <ng-container *ngIf="!play">
+      Open Stellarium
+    </ng-container>
+    <ng-container *ngIf="play">
+      Close Stellarium
+    </ng-container>
+    
+  </button>
